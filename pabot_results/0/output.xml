@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-31T16:44:08.408346" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Yahya\IdeaProjects\Robot\Tests">
+<suite id="s1-s1" name="Vinted Inscrire" source="C:\Users\Yahya\IdeaProjects\Robot\Tests\vinted_inscrire.robot">
+<test id="s1-s1-t1" name="User Create" line="11">
+<kw name="Go to url_vinted" owner="BasePage">
+<kw name="Open Browser">
+<msg time="2024-05-31T16:44:08.556436" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${url_vinted}</arg>
+<arg>${Browser}</arg>
+<status status="FAIL" start="2024-05-31T16:44:08.556436" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-31T16:44:08.556436" elapsed="0.010008">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Click on the button s'inscrire/Se connecter" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Click on Email" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Enter nom de utilisatuer" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Enter username" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Enter password" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Click checkbox" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button Button continuer" owner="vinted_home_Page">
+<status status="NOT RUN" start="2024-05-31T16:44:08.566444" elapsed="0.000000"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" start="2024-05-31T16:44:08.556436" elapsed="0.010008">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" start="2024-05-31T16:44:08.471763" elapsed="0.094681"/>
+</suite>
+<status status="FAIL" start="2024-05-31T16:44:08.428486" elapsed="0.137958"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Vinted Inscrire">Tests.Vinted Inscrire</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-31T16:44:08.488397" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_searche_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
+  c:\Users\Yahya\IdeaProjects\Robot\.venv
+  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
+<msg time="2024-05-31T16:44:08.504030" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_home_Page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
+  c:\Users\Yahya\IdeaProjects\Robot\.venv
+  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
+<msg time="2024-05-31T16:44:08.524176" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\BasePage.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
+  c:\Users\Yahya\IdeaProjects\Robot\.venv
+  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
+<msg time="2024-05-31T16:44:08.540805" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\Cookies.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
+  c:\Users\Yahya\IdeaProjects\Robot\.venv
+  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
+<msg time="2024-05-31T16:44:08.540805" level="WARN">Imported library 'C:\Users\Yahya\IdeaProjects\Robot\Resources\methot.py' contains no keywords.</msg>
+</errors>
+</robot>

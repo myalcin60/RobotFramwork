@@ -1,0 +1,19 @@
+pip install robotframework
+
+Paralel testler
+    pip install robotframework-pabot  (paralel testler icin)
+    pabot --processes 3 Tests/   ---> calistirmak icin
+    pabot --processes 3 --outputdir Results Tests/    ---> testleri calistirip ayni dosyada raporlamak icin
+
+
+Python dosyasindan method kukkanmak
+    Library  ../Resources/methot.py   seklinde pythonda yazdigin kodlari kullanabilirsin
+
+Smoke testler
+    # ortak tag testleri calistirmak icin   robot --include tag Tests(klasor ismi)
+
+Raporlama    
+Eğer testlerinizi paralel çalıştırdıktan sonra raporları birleştirmek isterseniz, 
+rebot komutunu kullanabilirsiniz. rebot, Robot Framework'ün sonuç dosyalarını birleştiren ve raporlar oluşturan bir aracıdır.
+
+    rebot --outputdir Results Results/output.xml
