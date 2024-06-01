@@ -11,7 +11,7 @@ Python dosyasindan method kukkanmak
 
 Smoke testler
     # ortak tag testleri calistirmak icin   robot --include tag Tests(klasor ismi)
-
+    # robot --include Smoke --outputdir Results Tests  Results klasorunun altinda rapor almak icin
 Raporlama    
 Eğer testlerinizi paralel çalıştırdıktan sonra raporları birleştirmek isterseniz, 
 rebot komutunu kullanabilirsiniz. rebot, Robot Framework'ün sonuç dosyalarını birleştiren ve raporlar oluşturan bir aracıdır.

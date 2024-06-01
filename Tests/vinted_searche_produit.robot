@@ -1,6 +1,5 @@
 *** Settings ***
 Library  SeleniumLibrary
-Library  ../Resources/methot.py
 Resource  ../Pages/vinted_searche_page.robot
 Resource    ../Pages/BasePage.robot
 

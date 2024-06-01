@@ -1,257 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.0 (Python 3.12.1 on win32)" generated="2024-05-31T16:56:25.664820" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-06-01T19:35:54.673607" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\Yahya\IdeaProjects\Robot\Tests">
 <suite id="s1-s1" name="Vinted Inscrire" source="C:\Users\Yahya\IdeaProjects\Robot\Tests\vinted_inscrire.robot">
 <test id="s1-s1-t1" name="User Create" line="11">
 <kw name="Go to url_vinted" owner="BasePage">
-<kw name="Open Browser">
-<msg time="2024-05-31T16:56:24.442179" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:35:55.036201" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
 <arg>${url_vinted}</arg>
 <arg>${Browser}</arg>
-<status status="FAIL" start="2024-05-31T16:56:24.442179" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-01T19:35:55.036201" elapsed="4.713095"/>
 </kw>
-<kw name="Maximize Browser Window">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-01T19:35:59.749296" elapsed="0.356589"/>
 </kw>
-<status status="FAIL" start="2024-05-31T16:56:24.426562" elapsed="0.017123">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:35:55.036201" elapsed="5.069684"/>
 </kw>
 <kw name="Reject Vinted_Cookie" owner="Cookies">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-01T19:36:00.105885" elapsed="1.689402"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:01.796286" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:01.795287" elapsed="0.221640"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:00.105885" elapsed="1.911042"/>
 </kw>
 <kw name="Click on the button s'inscrire/Se connecter" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:02.018873" level="INFO">Clicking element 'xpath=//a[@role='button']'.</msg>
+<arg>${S'inscrire}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:02.018873" elapsed="0.379801"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:02.018308" elapsed="0.381369"/>
 </kw>
 <kw name="Click on Email" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:02.401378" level="INFO">Clicking element 'xpath=(//span[@role='button'])[1]'.</msg>
+<arg>${Contact_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:02.401378" elapsed="0.165030"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:02.399677" elapsed="0.166731"/>
 </kw>
 <kw name="Enter nom de utilisatuer" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:02.566408" level="INFO">Typing text 'yalcin' into text field 'id=login'.</msg>
+<arg>${nomDeUtiliseteur}</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:02.566408" elapsed="0.259625"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:02.566408" elapsed="0.259625"/>
 </kw>
 <kw name="Enter username" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:02.826033" level="INFO">Clicking element 'id=email'.</msg>
+<arg>${username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:02.826033" elapsed="0.113783"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:02.939816" level="INFO">Typing text 'yalcinhoca0@gmail.com' into text field 'id=email'.</msg>
+<arg>${username}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:02.939816" elapsed="0.174634"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:02.826033" elapsed="0.288417"/>
 </kw>
 <kw name="Enter password" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:03.114450" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${motDePass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:03.114450" elapsed="0.086865"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:03.203315" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-06-01T19:36:03.238060" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${motDePass}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:03.202316" elapsed="0.124298"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:03.114450" elapsed="0.212164"/>
 </kw>
 <kw name="Click checkbox" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:03.326614" level="INFO">Clicking element 'xpath=//label[@for='agreeRules']'.</msg>
+<arg>${checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:03.326614" elapsed="0.089007"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:03.326614" elapsed="0.089007"/>
 </kw>
 <kw name="Click Button Button continuer" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:03.417618" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>${Btn_continuer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:03.416617" elapsed="0.264847"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:03.416617" elapsed="0.264847"/>
 </kw>
 <tag>Smoke</tag>
-<status status="FAIL" start="2024-05-31T16:56:24.426562" elapsed="0.017123">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:35:55.036201" elapsed="8.645263"/>
 </test>
-<status status="FAIL" start="2024-05-31T16:56:24.379000" elapsed="0.064000"/>
+<status status="PASS" start="2024-06-01T19:35:54.720479" elapsed="8.967621"/>
 </suite>
 <suite id="s1-s2" name="Vinted Se Connecter" source="C:\Users\Yahya\IdeaProjects\Robot\Tests\vinted_se_connecter.robot">
 <test id="s1-s2-t1" name="User Login" line="11">
 <kw name="Go to url_vinted" owner="BasePage">
-<kw name="Open Browser">
-<msg time="2024-05-31T16:56:24.426562" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:03.732081" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
 <arg>${url_vinted}</arg>
 <arg>${Browser}</arg>
-<status status="FAIL" start="2024-05-31T16:56:24.426562" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-01T19:36:03.731083" elapsed="5.189794"/>
 </kw>
-<kw name="Maximize Browser Window">
-<status status="NOT RUN" start="2024-05-31T16:56:24.442179" elapsed="0.000000"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-01T19:36:08.920877" elapsed="0.667989"/>
 </kw>
-<status status="FAIL" start="2024-05-31T16:56:24.426562" elapsed="0.015617">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:36:03.730079" elapsed="5.858787"/>
 </kw>
 <kw name="Reject Vinted_Cookie" owner="Cookies">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-01T19:36:09.618849" elapsed="1.846574"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:11.465423" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:11.465423" elapsed="0.392317"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:09.617850" elapsed="2.239890"/>
 </kw>
 <kw name="Click on the button s'inscrire/Se connecter" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:11.863737" level="INFO">Clicking element 'xpath=//a[@role='button']'.</msg>
+<arg>${S'inscrire}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:11.862739" elapsed="0.269771"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:11.861739" elapsed="0.270771"/>
 </kw>
 <kw name="Clickon Se_connecter" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:12.133836" level="INFO">Clicking element 'xpath=(//span[@role='button'])[2]'.</msg>
+<arg>${Se_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:12.133836" elapsed="0.173264"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:12.133836" elapsed="0.173264"/>
 </kw>
 <kw name="Click on Email" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:12.323948" level="INFO">Clicking element 'xpath=(//span[@role='button'])[1]'.</msg>
+<arg>${Contact_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:12.323475" elapsed="0.323177"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:12.307100" elapsed="0.339552"/>
 </kw>
 <kw name="Enter email ou nom de utilisatuer" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:12.646652" level="INFO">Typing text 'yalcinhoca0@gmail.com' into text field 'id=username'.</msg>
+<arg>${email_se_connecter}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:12.646652" elapsed="0.477777"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:12.646652" elapsed="0.477777"/>
 </kw>
 <kw name="Enter password" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:13.127427" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${motDePass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:13.127427" elapsed="0.119000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:13.248426" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-06-01T19:36:13.306384" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${motDePass}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:13.247425" elapsed="0.248690"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:13.126427" elapsed="0.369688"/>
 </kw>
 <kw name="Click Button Button continuer" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:13.503104" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>${Btn_continuer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:13.503104" elapsed="0.874517"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:13.502104" elapsed="0.875517"/>
 </kw>
 <kw name="Move the slider" owner="vinted_home_Page">
-<status status="NOT RUN" start="2024-05-31T16:56:24.443685" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-01T19:36:14.377621" elapsed="0.640938"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:15.018559" level="INFO">Selecting frame 'xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe'.</msg>
+<arg>xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-06-01T19:36:15.018559" elapsed="0.494096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${slider}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-01T19:36:15.513660" elapsed="7.225697"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>${slider}</arg>
+<arg>202</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2024-06-01T19:36:22.739357" elapsed="1.751922"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:14.377621" elapsed="10.113658"/>
 </kw>
 <tag>Smoke</tag>
-<status status="FAIL" start="2024-05-31T16:56:24.426562" elapsed="0.017123">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:36:03.727081" elapsed="20.781037"/>
 </test>
-<status status="FAIL" start="2024-05-31T16:56:24.379685" elapsed="0.064000"/>
+<status status="PASS" start="2024-06-01T19:36:03.690097" elapsed="20.818021"/>
 </suite>
 <suite id="s1-s3" name="Vinted Searche Produit" source="C:\Users\Yahya\IdeaProjects\Robot\Tests\vinted_searche_produit.robot">
 <test id="s1-s3-t1" name="vinted search bar" line="14">
 <kw name="Go to url_vinted" owner="BasePage">
-<kw name="Open Browser">
-<msg time="2024-05-31T16:56:25.362067" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:24.551531" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
 <arg>${url_vinted}</arg>
 <arg>${Browser}</arg>
-<status status="FAIL" start="2024-05-31T16:56:25.362067" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-01T19:36:24.550532" elapsed="5.170412"/>
 </kw>
-<kw name="Maximize Browser Window">
-<status status="NOT RUN" start="2024-05-31T16:56:25.362067" elapsed="0.000000"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-01T19:36:29.720944" elapsed="0.448552"/>
 </kw>
-<status status="FAIL" start="2024-05-31T16:56:25.362067" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:36:24.549532" elapsed="5.619964"/>
 </kw>
 <kw name="Write ay8embijoux at the searche bar and click enter" owner="vinted_searche_page">
-<status status="NOT RUN" start="2024-05-31T16:56:25.362067" elapsed="0.000000"/>
+<kw name="Input text in search_bar" owner="vinted_searche_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:30.178180" level="INFO">Typing text 'ay8embijoux' into text field 'id= search_text'.</msg>
+<arg>${search_bar}</arg>
+<arg>${ayem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:30.174261" elapsed="0.716284"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${search_bar}</arg>
+<arg>${KEY_ENTER}</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:30.891545" elapsed="2.989545"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:30.171496" elapsed="3.709594"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:30.170495" elapsed="3.711594"/>
 </kw>
 <kw name="Verifier there are 11 results" owner="vinted_searche_page">
-<status status="NOT RUN" start="2024-05-31T16:56:25.362067" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${parent_div_produit}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-01T19:36:33.883091" elapsed="2.004726"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:36:35.966560" level="INFO">${child_divs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ed423546f0624c2387291911dc92aa6e", element="f.36855B4487123876F8F6B91D1B8A5941.d.E8388EE95CA8A2691C03266904FEE507.e.131")&gt;, &lt;selenium.webdri...</msg>
+<var>${child_divs}</var>
+<arg>${child_div_produit}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-06-01T19:36:35.888820" elapsed="0.077740"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-06-01T19:36:35.966915" level="INFO">Length is 11.</msg>
+<msg time="2024-06-01T19:36:35.966915" level="INFO">${child_div_count} = 11</msg>
+<var>${child_div_count}</var>
+<arg>${child_divs}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-06-01T19:36:35.966915" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-06-01T19:36:35.967924" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${child_div_count}</arg>
+<arg>11</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-06-01T19:36:35.966915" elapsed="0.001009"/>
+</kw>
+<status status="PASS" start="2024-06-01T19:36:33.883091" elapsed="2.085820"/>
 </kw>
 <tag>Smoke</tag>
-<status status="FAIL" start="2024-05-31T16:56:25.362067" elapsed="0.000000">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2024-06-01T19:36:24.548533" elapsed="11.420378"/>
 </test>
-<status status="FAIL" start="2024-05-31T16:56:25.319048" elapsed="0.043019"/>
+<status status="PASS" start="2024-06-01T19:36:24.508118" elapsed="11.463798"/>
 </suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 3 executions.</doc>
-<status status="FAIL" start="2024-05-31T16:56:24.345000" elapsed="0.098158"/>
+<status status="PASS" start="2024-06-01T19:35:54.673607" elapsed="41.300300"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="3" skip="0">Smoke</stat>
+<stat pass="3" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="3" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Vinted Inscrire">Tests.Vinted Inscrire</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s2" name="Vinted Se Connecter">Tests.Vinted Se Connecter</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s3" name="Vinted Searche Produit">Tests.Vinted Searche Produit</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Vinted Inscrire">Tests.Vinted Inscrire</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Vinted Se Connecter">Tests.Vinted Se Connecter</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Vinted Searche Produit">Tests.Vinted Searche Produit</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-31T16:56:24.379685" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_searche_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.395309" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_home_Page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.410932" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\BasePage.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.426562" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\Cookies.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.426562" level="WARN">Imported library 'C:\Users\Yahya\IdeaProjects\Robot\Resources\methot.py' contains no keywords.</msg>
-<msg time="2024-05-31T16:56:24.379685" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_searche_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.395309" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_home_Page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.410932" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\BasePage.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:24.426562" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\Cookies.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:25.335385" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Tests\vinted_searche_produit.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:25.335385" level="WARN">Imported library 'C:\Users\Yahya\IdeaProjects\Robot\Resources\methot.py' contains no keywords.</msg>
-<msg time="2024-05-31T16:56:25.335385" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\vinted_searche_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
-<msg time="2024-05-31T16:56:25.346413" level="ERROR">Error in file 'C:\Users\Yahya\IdeaProjects\Robot\Pages\BasePage.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Yahya\IdeaProjects\Robot\.venv\Scripts\robot.exe
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\Yahya\AppData\Local\Programs\Python\Python312
-  c:\Users\Yahya\IdeaProjects\Robot\.venv
-  c:\Users\Yahya\IdeaProjects\Robot\.venv\Lib\site-packages</msg>
+<msg time="2024-06-01T19:35:55.036201" level="WARN">Imported library 'C:\Users\Yahya\IdeaProjects\Robot\Resources\methot.py' contains no keywords.</msg>
 </errors>
 </robot>

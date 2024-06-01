@@ -3,7 +3,7 @@ Resource  ../Pages/vinted_searche_page.robot
 Resource  ../Pages/vinted_home_Page.robot
 Resource  ../Pages/BasePage.robot
 Resource  ../Pages/Cookies.robot
-Library  ../Resources/methot.py
+
 *** Test Cases ***
 # Go to url vinted
 # Click on Login button
