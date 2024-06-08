@@ -8,7 +8,8 @@ User verifier there are 11 results
 
 *** Variables ***
 ${search_bar}    id= search_text
-${ayem}          ay8embijoux
+${ayem}          ay8embijoux 
+${produit}
 ${libellue}      xpath=//*[@id="content"]/div/div/section/div[15]/div/div[1]/div/div/div/div[2]/a
 ${price_locate}   xpath=//*[@id="sidebar"]/div[1]/div[1]/div[1]/div[1]/div[1]/h1
 ${KEY_ENTER}      \\13
@@ -19,7 +20,7 @@ ${child_div_produit}         xpath= //div[@class='feed-grid']//div[@data-testid=
 
 *** Keywords ***
 Input text in search_bar
-  Input Text    ${search_bar}    ${ayem}
+  Input Text    ${search_bar}   ${ayem}
   Press Key    ${search_bar}   ${KEY_ENTER}
 
   
@@ -31,8 +32,8 @@ Verify prix
    ${price}=  Get Text                  ${price_locate} 
    Should Be Equal As Strings          ${price}     25,00 €
 
-Write ay8embijoux at the searche bar and click enter
-  Input text in search_bar 
+Write produit at the searche bar and click enter
+  Input text in search_bar   
 
 Verifier there are 11 results
    Wait Until Element Is Visible    ${parent_div_produit}  10s

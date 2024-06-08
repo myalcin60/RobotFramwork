@@ -2,7 +2,7 @@
 Library    OperatingSystem
 Library    SeleniumLibrary
 Library    String
-
+Resource   ../Pages/Cookies.robot
 
 *** Variables ***
 ${Browser}            chrome
@@ -27,4 +27,5 @@ Go to url_Investing
 Go to url_vinted 
     Open Browser   ${url_vinted}  ${Browser} 
     Maximize Browser Window
+    Reject Vinted_Cookie
     

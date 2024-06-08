@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library    Collections
 
 *** Variables ***
 ${nom}           yalcin
@@ -19,11 +20,29 @@ ${Se_connecter}   xpath=(//span[@role='button'])[2]
 ${email_se_connecter}   id=username
 ${slider}               xpath=//i[@class='sliderIcon']
 
-
+${language}           xpath=//*[@id="__next"]/div[1]/div/div[1]/header/div/div/div[3]/div/div[2]/div[2]/div/div/button/span/span[1]
+${language_list}     xpath=//div[@class='u-overflow-hidden']//div
+${lng}          xpath=(//div[@class='u-ui-padding-left-small'])[2]//button/span/span
+@{list}=   FR  a  EN  b  ES  c  NL
         
 
 
 *** Keywords ***
+Choose language
+    Click Button    ${language}
+    ${list_items}=  Get WebElements    ${language_list}
+    FOR  ${index}  IN  0  2  4  6
+      ${item}=  Get From List ${list_items}  ${index}
+      Click Element     ${item}
+      ${item_2}=  Get From List  @{list}  ${index} 
+      Should Be Equal As Strings    ${item}    ${item_2}
+
+    END
+
+
+
+
+      
 Click on the button s'inscrire/Se connecter
    Click Element    ${S'inscrire}
 Click on Email 

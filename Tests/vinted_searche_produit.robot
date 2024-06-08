@@ -13,7 +13,7 @@ User verifier there are 11 results
 vinted search bar 
    [Tags]   Smoke
    Go to url_vinted
-   Write ay8embijoux at the searche bar and click enter
+   Write produit at the searche bar and click enter
    Verifier there are 11 results
   
     
