@@ -24,7 +24,8 @@ ${language}           xpath=//*[@id="__next"]/div[1]/div/div[1]/header/div/div/d
 ${language_list}     xpath=//div[@class='u-overflow-hidden']//div
 ${lng}          xpath=(//div[@class='u-ui-padding-left-small'])[2]//button/span/span
 @{list}=   FR  a  EN  b  ES  c  NL
-        
+
+${search_bar}    id= search_text      
 
 
 *** Keywords ***
@@ -70,4 +71,7 @@ Move the slider
   Select Frame    xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe
   Wait Until Element Is Visible    ${slider}  timeout=10s
   Drag And Drop By Offset   ${slider}   202  0  
+
+
+  
 
