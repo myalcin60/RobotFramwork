@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../Pages/vinted_searche_page.robot
-Resource    ../Pages/BasePage.robot
+Resource  ../Resources/Pages/vinted_searche_page.robot
+Resource  ../Resources/Pages/BasePage.robot
 
 
 *** Comments ***

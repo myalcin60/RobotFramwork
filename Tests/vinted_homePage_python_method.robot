@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Library   ../Resources/vinted_keywords.py
+Library   ../Resources/Python_Method/vinted_keywords.py
 
 
 

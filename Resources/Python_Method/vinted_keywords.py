@@ -1,7 +1,8 @@
 '''
 1 https://www.vinted.fr/ adresine git
 2 Vinted yazisinin gorundugnu dogrula
-3 Browser kapat
+3 Enter In The Search    ${produit}
+4 Browser kapat
 '''
 
 from selenium import webdriver

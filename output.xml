@@ -1,32 +1,374 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.12 on win32)" generated="20240703 09:50:33.025" rpa="false" schemaversion="3">
-<suite id="s1" name="vinted homePage python method" source="c:\Users\yalci\IdeaProjects\RobotFramwork\Tests\vinted_homePage_python_method.robot">
-<test id="s1-t1" name="Test Vinted Home Page with Pyton Method" line="15">
-<kw name="Open Vinted Website" library="vinted_keywords">
-<status status="PASS" starttime="20240703 09:50:36.015" endtime="20240703 09:50:38.593"/>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-03T10:08:53.796445" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\yalci\IdeaProjects\RobotFramwork\Tests">
+<suite id="s1-s1" name="Vinted Inscrire" source="C:\Users\yalci\IdeaProjects\RobotFramwork\Tests\vinted_inscrire.robot">
+<test id="s1-s1-t1" name="User Create" line="11">
+<kw name="Go to url_vinted" owner="BasePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:08:54.534256" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
+<arg>${url_vinted}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-03T10:08:54.534256" elapsed="4.527507"/>
 </kw>
-<kw name="Close Cookie" library="vinted_keywords">
-<status status="PASS" starttime="20240703 09:50:38.593" endtime="20240703 09:50:40.903"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-03T10:08:59.061763" elapsed="0.335782"/>
 </kw>
-<kw name="Verify Vinted Text Is Visible" library="vinted_keywords">
-<status status="PASS" starttime="20240703 09:50:40.908" endtime="20240703 09:50:40.995"/>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-03T10:08:59.397545" elapsed="1.882504"/>
 </kw>
-<kw name="Enter In The Search" library="vinted_keywords">
-<arg>${produit}</arg>
-<status status="PASS" starttime="20240703 09:50:41.010" endtime="20240703 09:50:48.000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:01.281045" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:01.281045" elapsed="0.207954"/>
 </kw>
-<status status="PASS" starttime="20240703 09:50:35.965" endtime="20240703 09:50:48.164"/>
+<status status="PASS" start="2024-07-03T10:08:59.397545" elapsed="2.091454"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:08:54.534256" elapsed="6.954743"/>
+</kw>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-03T10:09:01.502542" elapsed="0.024796"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:01.528355" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:01.528355" elapsed="0.150638"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:01.501548" elapsed="0.177445"/>
+</kw>
+<kw name="Click on the button s'inscrire/Se connecter" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:01.680994" level="INFO">Clicking element 'xpath=//a[@role='button']'.</msg>
+<arg>${S'inscrire}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:01.680994" elapsed="0.180774"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:01.679997" elapsed="0.181771"/>
+</kw>
+<kw name="Click on Email" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:01.862765" level="INFO">Clicking element 'xpath=(//span[@role='button'])[1]'.</msg>
+<arg>${Contact_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:01.862765" elapsed="0.231037"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:01.862765" elapsed="0.231037"/>
+</kw>
+<kw name="Enter nom de utilisatuer" owner="vinted_home_Page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.100470" level="INFO">Typing text 'yalcin' into text field 'id=login'.</msg>
+<arg>${nomDeUtiliseteur}</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.093802" elapsed="0.225854"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:02.093802" elapsed="0.225854"/>
+</kw>
+<kw name="Enter username" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.319656" level="INFO">Clicking element 'id=email'.</msg>
+<arg>${username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.319656" elapsed="0.110423"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.434186" level="INFO">Typing text 'yalcinhoca0@gmail.com' into text field 'id=email'.</msg>
+<arg>${username}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.433190" elapsed="0.151853"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:02.319656" elapsed="0.266388"/>
+</kw>
+<kw name="Enter password" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.586428" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${motDePass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.586428" elapsed="0.095465"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.683892" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-07-03T10:09:02.732039" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${motDePass}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.682893" elapsed="0.101410"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:02.586428" elapsed="0.197875"/>
+</kw>
+<kw name="Click checkbox" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.784303" level="INFO">Clicking element 'xpath=//label[@for='agreeRules']'.</msg>
+<arg>${checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.784303" elapsed="0.100522"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:02.784303" elapsed="0.100522"/>
+</kw>
+<kw name="Click Button Button continuer" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:02.884825" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>${Btn_continuer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:02.884825" elapsed="0.293831"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:02.884825" elapsed="0.293831"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-03T10:08:54.534256" elapsed="8.650022"/>
 </test>
-<status status="PASS" starttime="20240703 09:50:33.044" endtime="20240703 09:50:48.475"/>
+<status status="PASS" start="2024-07-03T10:08:53.874565" elapsed="9.309713"/>
+</suite>
+<suite id="s1-s2" name="Vinted Se Connecter" source="C:\Users\yalci\IdeaProjects\RobotFramwork\Tests\vinted_se_connecter.robot">
+<test id="s1-s2-t1" name="User Login" line="11">
+<kw name="Go to url_vinted" owner="BasePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:03.223985" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
+<arg>${url_vinted}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-03T10:09:03.223985" elapsed="5.112940"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-03T10:09:08.337924" elapsed="0.528597"/>
+</kw>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-03T10:09:08.868522" elapsed="2.081258"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:10.950780" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:10.949780" elapsed="0.672530"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:08.867522" elapsed="2.755790"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:03.222984" elapsed="8.400328"/>
+</kw>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-03T10:09:11.625308" elapsed="0.105079"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:11.731386" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:11.730387" elapsed="0.237960"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:11.624309" elapsed="0.344571"/>
+</kw>
+<kw name="Click on the button s'inscrire/Se connecter" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:11.968880" level="INFO">Clicking element 'xpath=//a[@role='button']'.</msg>
+<arg>${S'inscrire}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:11.968880" elapsed="0.256118"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:11.968880" elapsed="0.256118"/>
+</kw>
+<kw name="Clickon Se_connecter" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:12.230993" level="INFO">Clicking element 'xpath=(//span[@role='button'])[2]'.</msg>
+<arg>${Se_connecter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:12.230993" elapsed="0.379710"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:12.229994" elapsed="0.381708"/>
+</kw>
+<kw name="Click on Email" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:12.616699" level="INFO">Clicking element 'xpath=(//span[@role='button'])[1]'.</msg>
+<arg>${Contact_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:12.616699" elapsed="0.170826"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:12.615700" elapsed="0.171825"/>
+</kw>
+<kw name="Enter email ou nom de utilisatuer" owner="vinted_home_Page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:12.803925" level="INFO">Typing text 'yalcinhoca0@gmail.com' into text field 'id=username'.</msg>
+<arg>${email_se_connecter}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:12.802927" elapsed="0.303134"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:12.801927" elapsed="0.304134"/>
+</kw>
+<kw name="Enter password" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:13.117480" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${motDePass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:13.117480" elapsed="0.138185"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:13.267484" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-07-03T10:09:13.334141" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${motDePass}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:13.255665" elapsed="0.167898"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:13.106061" elapsed="0.317502"/>
+</kw>
+<kw name="Click Button Button continuer" owner="vinted_home_Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:13.435183" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>${Btn_continuer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:13.435183" elapsed="0.665841"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:13.434180" elapsed="0.666844"/>
+</kw>
+<kw name="Move the slider" owner="vinted_home_Page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-03T10:09:14.132274" elapsed="0.727717"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:14.860990" level="INFO">Selecting frame 'xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe'.</msg>
+<arg>xpath=//div[@style='height:100vh;width:100%;position:fixed;top:0;left:0;z-index:2147483647;background-color:#ffffff;']//iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-07-03T10:09:14.860990" elapsed="0.068723"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${slider}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-03T10:09:14.930713" elapsed="4.539795"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>${slider}</arg>
+<arg>202</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2024-07-03T10:09:19.470508" elapsed="1.600599"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:14.132274" elapsed="6.938833"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-03T10:09:03.220989" elapsed="17.860111"/>
+</test>
+<status status="PASS" start="2024-07-03T10:09:03.184278" elapsed="17.899820"/>
+</suite>
+<suite id="s1-s3" name="Vinted Searche Produit" source="C:\Users\yalci\IdeaProjects\RobotFramwork\Tests\vinted_searche_produit.robot">
+<test id="s1-s3-t1" name="vinted search bar" line="13">
+<kw name="Go to url_vinted" owner="BasePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:21.127645" level="INFO">Opening browser 'chrome' to base url 'https://www.vinted.fr/'.</msg>
+<arg>${url_vinted}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-03T10:09:21.124913" elapsed="7.495563"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-03T10:09:28.620476" elapsed="0.151698"/>
+</kw>
+<kw name="Reject Vinted_Cookie" owner="Cookies">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Vinted_Cookie}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-03T10:09:28.772174" elapsed="2.314585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:31.086759" level="INFO">Clicking element 'id=onetrust-reject-all-handler'.</msg>
+<arg>${Vinted_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:31.086759" elapsed="0.322418"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:28.772174" elapsed="2.637106"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:21.124913" elapsed="10.284367"/>
+</kw>
+<kw name="Write produit at the searche bar and click enter" owner="vinted_searche_page">
+<kw name="Input text in search_bar" owner="vinted_searche_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:31.413199" level="INFO">Typing text 'ay8embijoux' into text field 'id= search_text'.</msg>
+<arg>${search_bar}</arg>
+<arg>${ayem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:31.412644" elapsed="0.299779"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${search_bar}</arg>
+<arg>${KEY_ENTER}</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:31.712423" elapsed="2.247630"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:31.411278" elapsed="2.548775"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:31.410280" elapsed="2.549773"/>
+</kw>
+<kw name="Verifier there are 11 results" owner="vinted_searche_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${parent_div_produit}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-03T10:09:33.960053" elapsed="1.298905"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-03T10:09:35.358141" level="INFO">${child_divs} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="362f686f75c2f3387d314745735b49c8", element="f.AE7B162A3A3F0D66CEEDA1A803BB8988.d.972211FE99D85293CB5811EB9FA177EE.e.128")&gt;, &lt;selenium.webdri...</msg>
+<var>${child_divs}</var>
+<arg>${child_div_produit}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-03T10:09:35.258958" elapsed="0.099183"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-07-03T10:09:35.359141" level="INFO">Length is 11.</msg>
+<msg time="2024-07-03T10:09:35.359141" level="INFO">${child_div_count} = 11</msg>
+<var>${child_div_count}</var>
+<arg>${child_divs}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-07-03T10:09:35.359141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-07-03T10:09:35.360141" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${child_div_count}</arg>
+<arg>11</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-03T10:09:35.359141" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-07-03T10:09:33.960053" elapsed="1.400088"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-07-03T10:09:21.123903" elapsed="14.237238"/>
+</test>
+<status status="PASS" start="2024-07-03T10:09:21.084855" elapsed="14.277285"/>
+</suite>
+<status status="PASS" start="2024-07-03T10:08:53.796445" elapsed="41.568692"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="3" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="vinted homePage python method">vinted homePage python method</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Vinted Inscrire">Tests.Vinted Inscrire</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Vinted Se Connecter">Tests.Vinted Se Connecter</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Vinted Searche Produit">Tests.Vinted Searche Produit</stat>
 </suite>
 </statistics>
 <errors>

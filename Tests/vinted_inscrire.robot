@@ -1,8 +1,8 @@
 *** Settings ***
-Resource  ../Pages/vinted_searche_page.robot
-Resource  ../Pages/vinted_home_Page.robot
-Resource  ../Pages/BasePage.robot
-Resource  ../Pages/Cookies.robot
+Resource  ../Resources/Pages/vinted_searche_page.robot
+Resource  ../Resources/Pages/vinted_home_Page.robot
+Resource  ../Resources/Pages/BasePage.robot
+Resource  ../Resources/Pages/Cookies.robot
 
 *** Test Cases ***
 # Go to url vinted

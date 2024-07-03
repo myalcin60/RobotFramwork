@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource   ../Pages/vinted_home_Page.robot
-Resource   ../Pages/BasePage.robot
+Resource   ../Resources/Pages/vinted_home_Page.robot
+Resource   ../Resources/Pages/BasePage.robot
 
 *** Comments ***
 User go to vinted home Pages
